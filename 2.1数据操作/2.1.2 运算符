@@ -1,0 +1,14 @@
+#2.1.2 运算符
+import torch
+
+x = torch.tensor([1.0,2,4,8])
+y = torch.tensor([2,2,2,2])
+x + y, x - y, x * y, x / y, x ** y # 数组内每个元素对应运算
+torch.exp(x) #e的x次方
+
+#矩阵的拼接 X,Y的行、列必须满足格式要求
+X = torch.arange(12,dtype=torch.float32).reshape((3,4))
+Y = torch.tensor([[2.0,1,4,3],[1,2,3,4],[4,3,2,1]])
+torch.cat((X,Y),dim=0),torch.cat((X,Y),dim=1) #dim = 0连结行尾，dim = 1连结列尾
+X == Y #判断对应位置元素是否相等
+X.sum() #求和
