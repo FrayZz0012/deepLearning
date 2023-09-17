@@ -1,7 +1,7 @@
 #2.1.3 广播机制
 import torch
 
-a = torch.arange(3).reshape((3,1))
-b = torch.arange(2).reshape((1,2))
+a = torch.arange(3).reshape((3,1)) #reshape(row，col)
+b = torch.arange(2).reshape((1,2))  #reshape(row，col)
 a,b
 a + b #矩阵a复制列 矩阵b复制行 扩展为3*2的矩阵
