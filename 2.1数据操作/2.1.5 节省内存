@@ -1,0 +1,12 @@
+#2.1.5 节省内存
+import torch
+
+X = torch.arange(12,dtype=torch.float32).reshape((3,4))
+Y = torch.tensor([[2.0,1,4,3],[1,2,3,4],[4,3,2,1]])
+before = id(Y)
+Y = Y + X
+id(Y) == before #False 系统先分配新的地址存储X+Y的值，再将Y指向新的地址
+
+before = id(Y)
+Y[:] = X + Y #使用Y[:]将计算结果分配给之前的数组（原地计算） 或 直接 Y += X
+id(Y) == before #True
