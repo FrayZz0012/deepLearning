@@ -1,0 +1,10 @@
+#2.1.6 转换为其他python对象
+import torch
+
+X = torch.arange(12,dtype=torch.float32).reshape((3,4))
+A = X.numpy()
+B = torch.tensor(A)
+type(A),type(B)
+
+a = torch.tensor([3.5])
+a,a.item(),float(a),int(a)
