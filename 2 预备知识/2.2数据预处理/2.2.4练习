@@ -1,0 +1,8 @@
+# 练习
+#删除空值最多的一列
+
+data1 = pd.read_csv(data_file)
+nan_numer = data1.isnull().sum(axis=0)
+nan_max_id = nan_numer.idxmax()
+data1 = data1.drop([nan_max_id],axis=1)
+data1
