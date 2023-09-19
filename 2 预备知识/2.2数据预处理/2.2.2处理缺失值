@@ -1,0 +1,8 @@
+#2.2.2 处理缺失值
+
+inputs, outputs = data.iloc[:,0:2],data.iloc[:,2] #iloc[:,0:2]将前两列的给到inputs，iloc[:,2]将最后一列给到outputs
+inputs = inputs.fillna(inputs.mean()) #.fillna 在NaN处插入值，.mean()求出平均值
+print(inputs)
+
+inputs = pd.get_dummies(inputs,dummy_na=True) #pandas将Alley列分为Alley_Pave和Alley_nan
+print(inputs)
