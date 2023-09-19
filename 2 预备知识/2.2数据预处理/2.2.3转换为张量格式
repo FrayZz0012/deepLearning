@@ -1,0 +1,5 @@
+#2.2.3 转换为张量格式
+
+x = torch.tensor(inputs.to_numpy(dtype=float))
+y = torch.tensor(inputs.to_numpy(dtype=float))
+x,y
