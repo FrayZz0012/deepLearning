@@ -1,0 +1,10 @@
+#2.3.6 降维
+x = torch.arange(4,dtype=torch.float32)
+x,x.sum()
+
+A = torch.arange(20,dtype=torch.float32).reshape(5,4)
+A_sum_axis1 = A.sum(axis=1) #axis=0为行求和，axis=1为列求和
+A_sum_axis1,A_sum_axis1.shape
+
+A.mean(), A.sum() / A.numel() #求平均值
+A.mean(axis=0), A.sum(axis=0) / A.shape[0]
