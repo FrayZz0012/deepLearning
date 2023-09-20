@@ -1,4 +1,5 @@
 #2.3.6 降维
+import torch
 x = torch.arange(4,dtype=torch.float32)
 x,x.sum()
 
@@ -8,3 +9,9 @@ A_sum_axis1,A_sum_axis1.shape
 
 A.mean(), A.sum() / A.numel() #求平均值
 A.mean(axis=0), A.sum(axis=0) / A.shape[0]
+
+#2.3.6.1 非降维求和
+sum_A = A.sum(axis=0,keepdims=True)
+A / sum_A #通过广播将A除以平均值
+
+A.cumsum(axis=0) #按行或列求累计总和
