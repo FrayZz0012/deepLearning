@@ -1,0 +1,5 @@
+#2.3.3 矩阵
+
+A = torch.arange(20).reshape(5,4)
+A,A.T
+A[1][1]
