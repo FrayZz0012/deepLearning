@@ -1,0 +1,6 @@
+#2.3.8 矩阵-向量积
+import torch
+
+A = torch.arange(20,dtype=torch.float32).reshape(5,4)
+x = torch.arange(4,dtype=torch.float32)
+torch.mv(A,x) #torch.mv()计算矩阵的向量积
