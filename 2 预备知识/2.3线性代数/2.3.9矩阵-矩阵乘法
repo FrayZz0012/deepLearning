@@ -1,0 +1,5 @@
+#2.3.9矩阵-矩阵乘法
+
+A = torch.arange(20,dtype=torch.float32).reshape(5,4)
+B = torch.ones(4,3)
+A,torch.mm(A,B) #torch.mm()计算矩阵与矩阵乘积
