@@ -1,0 +1,8 @@
+#2.3.10 范数
+
+u = torch.tensor([3.0, -4.0])
+torch.norm(u) # L2范数 
+
+torch.abs(u).sum() # L1范数
+
+torch.norm(torch.ones((4,9))) # 对矩阵则是 Frobenius范数
