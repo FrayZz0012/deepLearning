@@ -1,0 +1,10 @@
+#2.5.1 自动微分
+
+import torch
+
+x = torch.arange(4.0)
+x.requires_grad_(True) #是否可获取梯度 True
+y = 2 * torch.dot(x, x)
+y.backward() # 反向传播
+print(y)
+print(x.grad) # 函数y = xT * x 的梯度为4x (?)
